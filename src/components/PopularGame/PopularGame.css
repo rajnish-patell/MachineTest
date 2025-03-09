@@ -1,0 +1,132 @@
+.topGamesSection h2 {
+    font-family: "Ceviche One", system-ui;
+    font-size: 53px;
+    line-height: 1;
+    padding: 0 44px;
+    text-align: center;
+    display: inline-block;
+}
+
+.headingWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.headingWrapper h2 {
+    display: inline-block;
+    background-color: var(--bodyBg);
+}
+
+.headingWrapper .dividerLine {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    background-color: #494949;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.gameCard {
+    background-color: #262626;
+    padding: 16px;
+    border-radius: 24px;
+    box-shadow: inset 0 0 8px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    transition: 0.3s all;
+}
+
+.gameCard:hover {
+    box-shadow: 0 0 20px 0 rgba(89, 255, 86, 0.5), rgba(89, 255, 56, 0.2) 0px 0px 8px 0 inset;
+}
+
+.gameCard>img {
+    width: 100%;
+}
+
+.gameCard .favoriteIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+}
+
+.gameCard .favoriteIcon>img {
+    width: 19px;
+}
+
+.topGamesSection .gamesRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+a.playBtn.topGameBtn:hover {
+    background: linear-gradient(to bottom, #6EF4C4, #009289);
+    box-shadow: -8px 8px rgba(0 0 0 / 55%);
+}
+
+a.playBtn.topGameBtn:hover span {
+    background: linear-gradient(to bottom, #6EF4C4, #009289);
+}
+
+a.playBtn.topGameBtn:hover:before {
+    box-shadow: 0px 0px 70px #6EF4C4;
+}
+
+
+
+.topGameBtn {
+    max-width: 140px;
+    height: 46px;
+    padding: 2px;
+    transform: perspective(180px) rotateY(-9deg) rotateX(-5deg) skewX(-20deg);
+    right: auto;
+    left: 54px;
+    bottom: 24px;
+    border-radius: 12px;
+}
+
+.topGameBtn span {
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 1600px) {
+    .topGameBtn {
+        max-width: 120px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .topGameBtn {
+        max-width: 120px;
+        height: 40px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .topGameBtn {
+        transform: unset;
+        margin-top: 30px;
+        max-width: 100%;
+        left: 0;
+        height: 50px;
+        top: 0;
+    }
+}
