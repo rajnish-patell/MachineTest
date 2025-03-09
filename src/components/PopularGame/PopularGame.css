@@ -129,4 +129,9 @@ a.playBtn.topGameBtn:hover:before {
         height: 50px;
         top: 0;
     }
+
+    .headingWrapper h2 {
+        font-size: 32px;
+        padding: 0 24px;
+    }
 }

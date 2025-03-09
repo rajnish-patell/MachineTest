@@ -80,4 +80,7 @@
         min-width: unset;
         max-width: calc(100% - 20px);
     }
+    .subscribeSection .subImg {
+        object-fit: cover;
+    }
 }

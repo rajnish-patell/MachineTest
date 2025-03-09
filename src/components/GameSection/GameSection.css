@@ -75,7 +75,8 @@ cursor: pointer;
     .gameSectionBg {
         background: unset;
         padding: 0;
-        min-height: unset
+        min-height: unset;
+        margin: 0;
     }
 
     .gameSectionBtn {
@@ -83,8 +84,9 @@ cursor: pointer;
         margin: 0 auto;
     }
     section.gameSection {
-        padding-top: 160px;
-        margin-bottom: 20px;
+        padding-top: 20px;
+        margin-bottom: 40px;
+        margin-top: 0;
     }
 
     .mb-100 {
