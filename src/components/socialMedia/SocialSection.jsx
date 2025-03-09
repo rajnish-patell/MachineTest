@@ -22,9 +22,9 @@ const SocialSection = () => {
     <section className="social-section">
       <Container className="custom-container">
         <div className="social-section__wrapper">
-          <div className="social-section__title-container">
+          <a href="#" className="social-section__title-container">
             <h2>Social Media</h2>
-          </div>
+          </a>
           <div className="social-section__content">
             <h2>Follow Us on</h2>
             <div className="social-section__links">

@@ -5,6 +5,8 @@ import GameSection from "../../components/GameSection/GameSection";
 import PopularGame from "../../components/PopularGame/PopularGame";
 import SubscribeNews from "../../components/SubscribeNews/SubscribeNews";
 import SocialSection from "../../components/socialMedia/SocialSection";
+import Footer from "../../components/Footer/Footer";
+
 
 const HomePage = () => {
   return (
@@ -15,6 +17,7 @@ const HomePage = () => {
       <PopularGame /> 
       <SubscribeNews /> 
       <SocialSection />
+      <Footer />
     </main>
   );
 };

@@ -51,18 +51,29 @@
   --pink: #FF00EE;
   --black: #000000;
   --bodyBg: #0E0E0E;
+  --purpleLt: #AA77A8;
   --green: #004A42;
+  --telegram: #039BE5;
+  --discord: #5046AF;
+  --twitter: #03A9F4;
+  --instagram: linear-gradient(135deg, rgba(250, 225, 0, 1) 0%, rgba(252, 183, 32, 1) 15%, rgba(255, 121, 80, 1) 30%, rgba(255, 121, 80, 1) 50%, rgba(108, 28, 209, 1) 100%);
+  --youtube: #FF0000;
+  --green: #004A42;
+  --bodyBg: #0E0E0E;
+  --darkGray: #6D6D6D;
+  --ddBg: #1B1B1B;
+  --footerBg: #291928;
 }
 
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+.main-content h1,
+.main-content  h2,
+.main-content  h3,
+.main-content  h4,
+.main-content  h5,
+.main-content  h6,
+.main-content  p {
   margin-bottom: 0;
 }
 

@@ -4,6 +4,7 @@ import { Container, Image,Row,Col,Form } from "react-bootstrap";
 import subscribe from "../../assets/images/subscribe.png";
 import question from "../../assets/images/question.png";
 import envelope from "../../assets/images/envelope.svg";
+import PlayButton from "../ui/Button";
 
 const SubscribeNews = () => {
   return (
@@ -31,6 +32,7 @@ const SubscribeNews = () => {
                     />
                   </div>
                 </Form.Group>
+                <PlayButton label="Subscribe" className="refCardBtn" />
               </div>
             </div>
           </Col>
@@ -43,6 +45,7 @@ const SubscribeNews = () => {
                   Visit our FAQ section for comprehensive information on
                   frequently asked questions.
                 </p>
+                <PlayButton label="FAQ Page" className="refCardBtn" />
               </div>
             </div>
           </Col>
