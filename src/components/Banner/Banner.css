@@ -1,0 +1,491 @@
+.bannerSec {
+    background: url('../../assets/images/heroImg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 850px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 150px 0 0;
+    margin-bottom: -1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bannerSec::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 175px;
+    background: linear-gradient(180deg, rgba(14, 14, 14, 0) 0%, rgba(14, 14, 14, 1) 100%);
+}
+
+.bannerSec .container-fluid {
+    padding: 0 140px;
+}
+
+.vendingMachine,
+.leftBannerTxt {
+    animation: mover 1.6s ease-in-out infinite alternate;
+}
+
+.vendingMachine {
+    position: relative;
+    animation: mover2 1.6s ease-in-out infinite alternate;
+    z-index: 9;
+}
+
+.bannerTxt {
+    font-family: "Condiment", cursive;
+    font-size: 170px;
+    line-height: 1.2;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-shadow: -2.9px -2.9px 23.9px #ff01b7;
+    color: var(--white);
+}
+
+.marqueeTxt {
+    font-family: "Ceviche One", system-ui;
+    font-size: 36px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 90px;
+    color: var(--white);
+    padding: 40px 0;
+}
+
+.marqueeTxt span {
+    color: var(--pink);
+}
+
+.marqueeWrapper .rfm-child {
+    width: 100%;
+}
+
+
+.marqueeWrapper .rfm-initial-child-container {
+    width: 100%;
+}
+
+.downloadIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #0e0e0e;
+    max-width: 390px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marqueeWrapper {
+    position: relative;
+    background-color: #0e0e0e;
+}
+
+.downloadIcon img {
+    width: 85px;
+    height: 85px;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+.bannerRight {
+    position: relative;
+}
+
+
+
+.InBitsky {
+    position: relative;
+    top: -90px;
+    left: -30px;
+}
+
+.cryptoCoin1 {
+    position: absolute;
+    top: -45px;
+    left: 30px;
+    animation: coin1 1.6s ease-in-out infinite alternate;
+}
+
+.cryptoCoin2 {
+    position: absolute;
+    right: 0px;
+    top: -60px;
+    animation: coin2 1.6s ease-in-out infinite alternate;
+}
+
+
+.cryptoCoin3 {
+    position: absolute;
+    left: -100px;
+    top: auto;
+    bottom: 60px;
+    filter: blur(2px);
+    animation: coin3 1.6s ease-in-out infinite alternate;
+}
+
+
+.cryptoCoin4 {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    bottom: 60px;
+    filter: blur(2px);
+    animation: coin4 1.6s ease-in-out infinite alternate;
+}
+
+
+.cryptoCoin5 {
+    position: absolute;
+    left: 115px;
+    top: 210px;
+    transform: translateY(-50%);
+    bottom: 60px;
+    animation: coin5 1.6s ease-in-out infinite alternate;
+}
+
+
+@keyframes coin1 {
+    0% {
+        transform: translateY(0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translateY(30px) rotate(-12deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes coin2 {
+    0% {
+        transform: translate(0, 0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(-50px, 40px) rotate(-12deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes coin3 {
+    0% {
+        transform: translate(0, 0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(20px, 0) rotate(20deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes coin4 {
+    0% {
+        transform: translate(0, 0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(5px, -20px) rotate(20deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes coin5 {
+    0% {
+        transform: translate(0, 0) rotate(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(20px, 40px) rotate(45deg) scale(0.95, 0.95);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translateY(-30px) scale(0.99, 0.99);
+    }
+}
+
+@keyframes mover2 {
+    0% {
+        transform: translateY(0) scale(1, 1);
+    }
+
+    100% {
+        transform: translateY(0) scale(1.1, 1.1);
+    }
+}
+
+
+.vendingMachine::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: 100%;
+    background-image: url(/src/assets/images/vectorEffect.png);
+    z-index: -1;
+    bottom: 0;
+    animation: mover3 1.6s ease-in-out infinite alternate;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes mover3 {
+    0% {
+
+
+        transform: translate(-50%, -50%) scale(1.2, 1.2);
+
+    }
+
+    100% {
+
+        transform: translate(-50%, -50%) scale(1, 1);
+
+    }
+}
+
+
+.winBigTxt {
+    position: relative;
+}
+
+.winBigTxt .playBtn {
+    position: relative;
+    bottom: 140px;
+    display: inline-block;
+    max-width: 262px;
+    width: 100%;
+    height: 84px;
+    transform: perspective(180px) rotateY(10deg) rotateX(5deg) skewX(12deg);
+    border-radius: 14px;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #F46EF1, #F46EF1);
+    box-shadow: -14px 14px 21px rgb(0 0 0 / 35%);
+    padding: 4px;
+    transition: all 0.5s;
+    right: 20px;
+}
+
+.winBigTxt .playBtn:hover {
+    box-shadow: -14px 14px rgba(0 0 0 / 55%);
+    transition: all 0.5s;
+}
+
+.winBigTxt .playBtn:hover span {
+    background: linear-gradient(320deg, #F46EF1, #AB0FA1);
+}
+
+
+.winBigTxt .playBtn span {
+    /* padding: 4px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Ceviche One';
+    font-size: 35px;
+    color: #4B024A;
+    border-radius: 14px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #F46EF1, #AB0FA1);
+}
+
+.winBigTxt .playBtn:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 12px 70px #f46ef1;
+    z-index: 1;
+    filter: blur(1px);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+
+@media (max-width: 1600px) {
+    .bannerSec .container-fluid {
+        padding: 0 60px;
+    }
+
+    .cryptoCoin3 {
+        max-width: 80px;
+    }
+
+    .cryptoCoin1 {
+        max-width: 80px;
+    }
+
+    .cryptoCoin2 {
+        max-width: 60px;
+    }
+
+    .cryptoCoin4 {
+        max-width: 60px;
+        right: -6%;
+    }
+
+    .cryptoCoin5 {
+        left: 0;
+    }
+}
+
+
+
+@media (max-width: 1199px) {
+    .cryptoCoin2 {
+        max-width: 60px;
+    }
+
+    .cryptoCoin4 {
+        max-width: 60px;
+        right: -6%;
+    }
+
+    .cryptoCoin5 {
+        left: 0;
+    }
+
+    .bannerSec {
+        padding: 20px 0 0;
+    }
+
+
+    .winBigTxt .playBtn {
+        max-width: 160px;
+        width: 100%;
+        bottom: 40px;
+        height: 48px;
+        transform: perspective(90px) rotateY(10deg) rotateX(5deg) skewX(10deg);
+        padding: 2px;
+    }
+
+    .winBigTxt .playBtn span {
+        font-size: 24px;
+    }
+
+    .cryptoCoin2 {
+        max-width: 60px;
+    }
+
+    .cryptoCoin4 {
+        max-width: 60px;
+        right: -6%;
+    }
+
+    .cryptoCoin5 {
+        left: 0;
+    }
+
+    .bannerSec {
+        padding: 40px 0 0;
+    }
+
+
+    .leftBannerTxt img:first-child {
+        max-width: 300px;
+    }
+
+
+    .vendingMachine {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .marqueeTxt {
+        padding: 10px 0;
+        font-size: 24px;
+    }
+
+    .downloadIcon {
+        max-width: 120px
+    }
+
+    .downloadIcon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .leftBannerTxt img:last-child {
+        max-width: 215px;
+        top: -30px;
+        left: -5px;
+    }
+
+    .bannerSec {
+        min-height: 800px;
+    }
+
+    .bannerRight {
+        max-width: 480px;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .cryptoCoin3 {
+        left: -50px;
+    }
+    .cryptoCoin5 {
+        top: 150px;
+    }
+ 
+    .bannerSec .container-fluid {
+        padding: 0 15px;
+    }
+  
+    .bannerRight {
+        max-width: 290px;
+    }
+    .cryptoCoin1 {
+        max-width: 40px;
+        top: 0;
+    }
+    
+    .cryptoCoin2 {
+        max-width: 30px;
+        top: 0;
+    }
+    
+    .cryptoCoin4 {
+        top: 115px;
+        right: -10px;
+        max-width: 40px;
+        filter: blur(0);
+    }
+    
+    img.cryptoCoin3.img-fluid {
+        max-width: 40px;
+        top: 88px;
+        left: 0;
+        filter: url();
+    }
+    .winBigTxt .playBtn {
+        right: 0;
+    }
+    .bannerSec {
+        min-height: 780px;
+    }
+ 
+}
+
+
+
