@@ -384,7 +384,7 @@ body:has(.main-content) {
   position: absolute;
   bottom: -8px;
   left: -9px;
-  background-image: url(../../assets/images/tabs-bottom-main-content.png);
+  background-image: url(./assets/images/tabs-bottom-main-content.png);
   z-index: 5;
   background-size: cover;
 }
@@ -395,12 +395,12 @@ body:has(.main-content) {
   position: absolute;
   top: -9px;
   right: -6px;
-  background-image: url(../../assets/images/tabs-bottom-main-content.png);
+  background-image: url(./assets/images/tabs-bottom-main-content.png);
   z-index: 5;
   background-size: cover;
 }
 .tabsBodyDesign .tabsBodyContent .contentBox .rightContentBox ul li.Active .leftName:before {
-  background-image: url(../../assets/images/img-active.png);
+  background-image: url(./assets/images/img-active.png);
 }
 .tabsBodyDesign .tabsBodyContent .contentBox .rightContentBox ul li.Active .leftName {
   border-image: linear-gradient(to right, red, yellow) 1;
