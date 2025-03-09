@@ -264,8 +264,12 @@
 }
 
 .winBigTxt .playBtn {
-    position: relative;
     bottom: 140px;
+    right: 20px;
+}
+
+.playBtn {
+    position: relative;
     display: inline-block;
     max-width: 262px;
     width: 100%;
@@ -277,20 +281,21 @@
     box-shadow: -14px 14px 21px rgb(0 0 0 / 35%);
     padding: 4px;
     transition: all 0.5s;
-    right: 20px;
+   
 }
 
-.winBigTxt .playBtn:hover {
+
+.playBtn:hover {
     box-shadow: -14px 14px rgba(0 0 0 / 55%);
     transition: all 0.5s;
 }
 
-.winBigTxt .playBtn:hover span {
+.playBtn:hover span {
     background: linear-gradient(320deg, #F46EF1, #AB0FA1);
 }
 
 
-.winBigTxt .playBtn span {
+.playBtn span {
     /* padding: 4px; */
     display: flex;
     align-items: center;
@@ -300,12 +305,12 @@
     font-family: 'Ceviche One';
     font-size: 35px;
     color: #4B024A;
-    border-radius: 14px;
+    border-radius: 12px;
     margin: 0 auto;
     background: linear-gradient(180deg, #F46EF1, #AB0FA1);
 }
 
-.winBigTxt .playBtn:hover:before {
+ .playBtn:hover:before {
     content: '';
     position: absolute;
     top: 0;
@@ -436,6 +441,9 @@
     .bannerRight {
         max-width: 480px;
         margin: auto;
+    }
+    .winBigTxt .playBtn:hover {
+        box-shadow: -8px 8px rgba(0 0 0 / 55%);
     }
 
 }

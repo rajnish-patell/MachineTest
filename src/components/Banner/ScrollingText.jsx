@@ -25,7 +25,7 @@ const ScrollingText = () => {
       </Marquee>
 
       <div className="downloadIcon">
-        <a href="/#referSection">
+        <a href="/#referralSection">
           <Image src={downloadIcon} fluid />
         </a>
       </div>

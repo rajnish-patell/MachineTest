@@ -11,6 +11,7 @@ import cryptoCoin2 from "../../assets/images/cryptoCoin2.png";
 import cryptoCoin3 from "../../assets/images/cryptoCoin3.png";
 import cryptoCoin4 from "../../assets/images/cryptoCoin4.png";
 import cryptoCoin5 from "../../assets/images/cryptoCoin5.png";
+import PlayButton from "../ui/Button";
 
 const Banner = () => {
   return (
@@ -23,15 +24,16 @@ const Banner = () => {
                 <div className="winBigTxt text-center">
                   <div className="leftBannerTxt">
                     <Image src={winBig} className="d-block mx-auto" fluid />
-                    <Image src={InBitsky} className="InBitsky d-inline-block text-center" fluid />
+                    <Image
+                      src={InBitsky}
+                      className="InBitsky d-inline-block text-center"
+                      fluid
+                    />
                   </div>
                   {/* <h1 className="bannerTxt">In Bitsky</h1> */}
 
-                  <div>
-                  <a href="#" className="playBtn">
-                    <span>Play Now</span>
-                  </a>
-                  </div>
+                  <PlayButton label="Play Now" className="custom-class" />
+
                 </div>
               </div>
             </Col>
@@ -40,8 +42,6 @@ const Banner = () => {
                 <div className="vendingMachine text-center">
                   <Image src={vendingMachImg} fluid />
                   {/* <Image src={vendingEffect}  className="bgEffect" fluid /> */}
-                  
-
                 </div>
                 <Image src={cryptoCoin1} className="cryptoCoin1" fluid />
                 <Image src={cryptoCoin2} className="cryptoCoin2" fluid />

@@ -1,0 +1,91 @@
+.gameSectionBg {
+    position: relative;
+    background: url(../../assets/images/playOff.png) no-repeat center center / contain;
+    min-height: 400px;
+    margin-top: -180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 95px;
+}
+
+
+.gameSectionVector img {
+    position: absolute;
+    right: 106px;
+    top: -32px;
+    width: 743px;
+    transform: rotate(3deg);
+}
+
+.gameSectionBtn:hover {
+    background: linear-gradient(180deg, #AB0FA1, #F46EF1);
+    box-shadow: 0px 12px 25px rgba(244, 110, 241, 0.5);
+}
+
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+/* .gameSectionBtn {
+background: url(../../assets/images/playoffVector.png) no-repeat center center / contain;
+padding: 27px 80px 40px 80px;
+min-width: 530px;
+min-height: 135px;
+display: flex
+;
+align-items: center;
+justify-content: center;
+position: relative;
+z-index: 1;
+cursor: pointer;
+}
+
+
+.gameSectionBtn h2 {
+    font-family: "Ceviche One", system-ui;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--green);
+    transform: rotate(5deg);
+} */
+
+@media (max-width: 1600px) {
+    .gameSectionBtn {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .gameSectionBtn {
+        max-width: 300px;
+    }
+    section.gameSection {
+        padding-top: 180px;
+    }
+ 
+    .gameSectionVector img {
+        top: -17px;
+        width: 650px;
+    } 
+    
+}
+
+@media (max-width: 1199px) {
+    .gameSectionVector img {
+        display: none;
+    }
+    .gameSectionBg {
+        background: unset;
+        padding: 0;
+        min-height: unset
+    }
+
+    .gameSectionBtn {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+}

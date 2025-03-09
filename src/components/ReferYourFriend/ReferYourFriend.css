@@ -1,0 +1,275 @@
+.referralSection {
+    background: url(../../assets/images/referBg.jpg) no-repeat center center / cover;
+    padding: 130px 0 50px;
+    min-height: 900px;
+    position: relative;
+}
+
+.referralSection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 14, 14, 0.8);
+}
+
+.refGradientLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+    height: 100%;
+    background: linear-gradient(90deg,
+        rgba(14, 14, 14, 1) 0%,
+        rgba(14, 14, 14, 0) 100%);
+    pointer-events: none;
+}
+
+.refGradientRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 180px;
+    height: 100%;
+    background: linear-gradient(90deg,
+        rgba(14, 14, 14, 0) 0%,
+        rgba(14, 14, 14, 1) 100%);
+    pointer-events: none;
+}
+
+.refGradientTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 308px;
+    background: linear-gradient(180deg,
+        rgba(14, 14, 14, 1) 0%,
+        rgba(14, 14, 14, 0) 100%);
+    pointer-events: none;
+}
+
+.refGradientBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 308px;
+    background: linear-gradient(180deg,
+        rgba(14, 14, 14, 0) 0%,
+        rgba(14, 14, 14, 1) 100%);
+    pointer-events: none;
+}
+
+.refBox {
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.refBoxContent {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.rCard1 .refBoxContent {
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.refBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.rCard2 .refCharacter {
+    position: absolute;
+    right: 0;
+    top: -73px;
+    bottom: 0;
+    max-width: 410px;
+    height: 470px;
+    pointer-events: none;
+    left: auto;
+    transform: rotate(1deg);
+}
+
+.rCard2 .refBoxContent {
+    padding-left: 20px;
+    justify-content: flex-start;
+    text-align: right;
+}
+
+.refCharacter {
+    position: absolute;
+    left: 0;
+    top: -70px;
+    bottom: 0;
+    max-width: 410px;
+    height: 470px;
+    pointer-events: none;
+}
+
+.refContent {
+    max-width: 370px;
+    position: relative;
+}
+
+.refBox.rCard1 .refCharacter {
+    top: -74px;
+    transform: rotate(-1deg);
+    border-radius: 24px;
+}
+
+.referralSection h2 {
+    font-family: "Ceviche One", system-ui;
+    font-size: 47px;
+    line-height: 0.9;
+    margin-bottom: 12px;
+    color: var(--white);
+}
+
+.referralSection p {
+    margin-bottom: 12px;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.playBtn.refCardBtn {
+    max-width: 150px;
+    height: 50px;
+    transform: perspective(100px) rotateY(10deg) rotateX(5deg) skewX(12deg);
+    border-radius: 8px;
+    padding: 2px;
+    right: -20px;
+}
+.playBtn.refCardBtn span {
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.playBtn.refCardBtn:hover {
+    box-shadow: -8px 8px rgba(0 0 0 / 55%);
+    transition: all 0.5s;
+}
+
+.rCard2 .playBtn.refCardBtn {
+    transform: perspective(100px) rotateY(-10deg) rotateX(-5deg) skewX(-12deg);
+    right: auto;
+    left: -20px;
+}
+
+
+
+@media (max-width: 1600px) {
+
+
+    .refContent {
+        max-width: 300px;
+        position: relative;
+    }
+    .referralSection p {
+        font-size: 16px;
+    }
+    .referralSection h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .refBox.rCard1 {
+        margin-bottom: 90px;
+    }
+    .refContent {
+        max-width: 100%;
+        position: relative;
+        text-align: left;
+    }
+  
+}
+
+@media (max-width: 991px) {
+    .refContent {
+        max-width: 360px;
+    }
+}
+
+
+@media (max-width: 767px) {
+.referralSection p {
+    font-size: 16px;
+}
+
+.refBox.rCard1 {
+    margin-bottom: 90px;
+}
+
+
+
+.refContent {
+    text-align: left;
+}
+
+.refContent {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.refBoxContent {
+    align-items: end;
+    padding-bottom: 20px;
+}
+
+.refContent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    background: #0000000d;
+    width: calc(100% - 10px);
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+}
+
+.rCard2 .refBoxContent {
+    padding-left: 0;
+}
+
+.rCard1 .refBoxContent {
+    padding-right: 0;
+}
+
+
+}
+
+@media (max-width: 575px) {
+    .refBox.rCard1 .refCharacter {
+        max-width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+}

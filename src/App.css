@@ -50,6 +50,7 @@
   --white: #ffffff;
   --pink: #FF00EE;
   --black: #000000;
+  --bodyBg: #0E0E0E;
 }
 
 
@@ -84,7 +85,27 @@ ol {
   list-style: none;
 }
 
+body {
+  color: var(--white);
+}
+
+
+.custom-container.container {
+  max-width: 1560px;
+}
+
+body:has(.main-content) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: var(--bodyBg);
+  color: var(--white);
+  overflow-x: hidden;
+}
 
 /*...............................................*/
 /*                  Common Css          */
 /*...............................................*/
+
+
