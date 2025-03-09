@@ -34,12 +34,7 @@ const PopularCard = ({ image }) => (
   <div className="gamesColumn">
     <div className="gameCard">
       <img src={image} alt="top game" />
-      {/* <div className="favoriteIcon">
-        <img src={heart} alt="favorite" />
-      </div> */}
-      {/* <Button className="gamePlayBtn" style={{ backgroundImage: `url(${gamePlayBtn})` }}>
-        Play Now
-      </Button> */}
+     
        <div className="favoriteIcon">
         <Image src={heart} alt="favorite" />
       </div>

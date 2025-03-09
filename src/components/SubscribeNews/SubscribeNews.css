@@ -83,4 +83,7 @@
     .subscribeSection .subImg {
         object-fit: cover;
     }
+    .subscribeSection {
+        padding: 20px;
+    }
 }

@@ -53,6 +53,7 @@
     line-height: 1.4;
     padding: 4px;
     text-decoration: capitalize;
+    transition: all 0.3s;
 }
 
 .footer-links>li>a:hover {
@@ -153,15 +154,5 @@ ul.footer-links li a {
     .footer-wrapper .footer-section {
         width: 100%;
     }
-    .social-section__title-container {
-        max-width: calc(100% - 30px);
-        width: 100%;
-        margin: 0 auto;
-    }
-    .social-section__title-container h2 {
-        font-size: 32px;
-    }
-    .social-section__content h2 {
-        font-size: 28px;
-    }
+   
 }

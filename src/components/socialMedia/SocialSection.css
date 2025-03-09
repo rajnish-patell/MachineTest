@@ -163,4 +163,17 @@
         width: 100%;
         min-height: 60px;
     }
+    .social-section__title-container {
+        max-width: calc(100% - 30px);
+        width: 100%;
+        margin: 0 auto;
+    }
+    .social-section__title-container h2 {
+        font-size: 32px;
+    }
+    .social-section__content h2 {
+        font-size: 28px;
+        width: 100%;
+        min-width: unset;
+    }
 }
