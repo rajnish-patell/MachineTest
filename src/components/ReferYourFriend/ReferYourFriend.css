@@ -246,7 +246,7 @@
     content: '';
     position: absolute;
     top: 0;
-    background: #0000000d;
+    background: #00000047;
     width: calc(100% - 10px);
     height: 100%;
     left: 50%;

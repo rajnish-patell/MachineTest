@@ -1,307 +1,227 @@
-import React, { useState, useEffect } from "react";
-import { Tabs, Tab, Accordion } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import ImgTopRight from "../../assets/images/right-top-tabs-cor.png";
-import ImgTopLeft from "../../assets/images/left-top-tabs-cor.png";
-import ImgBottomRight from "../../assets/images/right-bottom-tabs-cor.png";
-import ImgbottomLeft from "../../assets/images/left-bottom-tabs-cor.png";
-import LeftImgTabs from "../../assets/images/FirstLast.png";
+import { useState } from "react";
+import { Container } from "react-bootstrap";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import tabTitle from "../../assets/images/tabTitle.png";
+import formLeftImg from "../../assets/images/formLeftImg.png";
+import leftCorner from "../../assets/images/leftCorner.png";
+import rightCorner from "../../assets/images/rightCorner.png";
+import rightBottomCorner from "../../assets/images/rightBottomCorner.png";
+import leftBottomCorner from "../../assets/images/leftBottomCorner.png";
 import PlayButton from "./Button";
 
 function CustomTabs() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [activeTab, setActiveTab] = useState("My-Account");
+  const [filledInputs, setFilledInputs] = useState({
+    first: false,
+    last: false,
+    user: false,
+    birthDate: false,
+    email: false,
+    number: false,
+  });
+  const [activeInput, setActiveInput] = useState(null);
 
-
+  const handleBlur = (e, field) => {
+    setActiveInput(null);
+    setFilledInputs((prev) => ({
+      ...prev,
+      [field]: e.target.value.trim() !== "",
+    }));
+  };
 
   return (
-    <>
-      <div className="tabDesignSection">
-        <div className="container">
-          <Row>
-            <Col md={12}>
-              {isMobile ? (
-                <Accordion defaultActiveKey="0">
-                  <Accordion.Item eventKey="0">
-                    <Accordion.Header> My Account </Accordion.Header>
-                    <Accordion.Body>
-                      <div>
-                        <div className="tabsBodyDesign">
-                          <span className="topLeftCor">
-                            <img src={ImgTopLeft} alt="" />
-                          </span>
-                          <span className="topRightCor">
-                            <img src={ImgTopRight} alt="" />
-                          </span>
-                          <span className="bottomLeftCor">
-                            <img src={ImgbottomLeft} alt="" />
-                          </span>
-                          <span className="bottomRightCor">
-                            <img src={ImgBottomRight} alt="" />
-                          </span>
-                          <div className="tabsBodyContent">
-                            <div className="midContent">
-                              <div className="headTabs">
-                                <h2>My Account</h2>
-                              </div>
-                              <div className="contentBox d-flex flex-wrap">
-                                <div className="leftImgBox">
-                                  <div className="imgBox">
-                                    <img src={LeftImgTabs} alt="" />
-                                  </div>
-                                  <div className="textBox">
-                                    <h6>
-                                      First <span>Last</span>
-                                    </h6>
-                                    <p>Name</p>
-                                  </div>
-                                </div>
-                                <div className="rightContentBox">
-                                  <div className="innerBoxRight">
-                                    <ul>
-                                      <li className="Active d-flex flex-wrap">
-                                        <span className="leftName">
-                                          <input
-                                            type="text"
-                                            placeholder="First Name"
-                                          />
-                                        </span>
-                                        <span className="rightName">
-                                          <input
-                                            type="text"
-                                            placeholder="Last Name"
-                                          />
-                                        </span>
-                                      </li>
-                                      <li className=" d-flex flex-wrap">
-                                        <span className="leftName">
-                                          <input
-                                            type="text"
-                                            placeholder="User Name"
-                                          />
-                                        </span>
-                                        <span className="rightName">
-                                          <input
-                                            type="text"
-                                            placeholder="Date of Birth"
-                                          />
-                                        </span>
-                                      </li>
-                                      <li className=" d-flex flex-wrap">
-                                        <span className="leftName">
-                                          <input
-                                            type="text"
-                                            placeholder="Email Address"
-                                          />
-                                        </span>
-                                        <span className="rightName">
-                                          <input
-                                            type="text"
-                                            placeholder="Phone Number"
-                                          />
-                                        </span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                  <div className="PlayBtnWrap text-end">
-                                  <PlayButton label="Play Now" className="refCardBtn" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="1">
-                    <Accordion.Header>
-                      <span>Wallet</span>
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      <div className="tabsBodyDesign">
-                        <span className="topLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <span className="bottomLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <div className="tabsBodyContent">
-                          <h2 className="text-center">My Wallet</h2>
-                        </div>
-                      </div>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="2">
-                    <Accordion.Header>All Transactions</Accordion.Header>
-                    <Accordion.Body>
-                      <div className="tabsBodyDesign">
-                        <span className="topLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <span className="bottomLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <div className="tabsBodyContent">
-                          <h2 className="text-center">My All Transactions</h2>
-                        </div>
-                      </div>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="3">
-                    <Accordion.Header>My Affiliates</Accordion.Header>
-                    <Accordion.Body>
-                      <div className="tabsBodyDesign">
-                        <span className="topLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <span className="bottomLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <div className="tabsBodyContent">
-                          <h2 className="text-center">My Affiliates</h2>
-                        </div>
-                      </div>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-              ) : (
-                <Tabs
-                  defaultActiveKey="MyAccount"
-                  id="uncontrolled-tab-example"
-                  className="mb-3"
-                >
-                  <Tab eventKey="MyAccount" title="My Account">
-                    <div>
-                      <div className="tabsBodyDesign">
-                        <span className="topLeftCor">
-                          <img src={ImgTopLeft} alt="" />
-                        </span>
-                        <span className="topRightCor">
-                          <img src={ImgTopRight} alt="" />
-                        </span>
-                        <span className="bottomLeftCor">
-                          <img src={ImgbottomLeft} alt="" />
-                        </span>
-                        <span className="bottomRightCor">
-                          <img src={ImgBottomRight} alt="" />
-                        </span>
-                        <div className="tabsBodyContent">
-                          <div className="midContent">
-                            <div className="headTabs">
-                              <h2>My Account</h2>
-                            </div>
-                            <div className="contentBox d-flex flex-wrap">
-                              <div className="leftImgBox">
-                                <div className="imgBox">
-                                  <img src={LeftImgTabs} alt="" />
-                                </div>
-                                <div className="textBox">
-                                  <h6>
-                                    First <span>Last</span>
-                                  </h6>
-                                  <p>Name</p>
-                                </div>
-                              </div>
-                              <div className="rightContentBox">
-                                <div className="innerBoxRight">
-                                  <ul>
-                                    <li className="Active d-flex flex-wrap">
-                                      <span className="leftName">
-                                        <input
-                                          type="text"
-                                          placeholder="First Name"
-                                        />
-                                      </span>
-                                      <span className="rightName">
-                                        <input
-                                          type="text"
-                                          placeholder="Last Name"
-                                        />
-                                      </span>
-                                    </li>
-                                    <li className=" d-flex flex-wrap">
-                                      <span className="leftName">
-                                        <input
-                                          type="text"
-                                          placeholder="User Name"
-                                        />
-                                      </span>
-                                      <span className="rightName">
-                                        <input
-                                          type="text"
-                                          placeholder="Date of Birth"
-                                        />
-                                      </span>
-                                    </li>
-                                    <li className=" d-flex flex-wrap">
-                                      <span className="leftName">
-                                        <input
-                                          type="text"
-                                          placeholder="Email Address"
-                                        />
-                                      </span>
-                                      <span className="rightName">
-                                        <input
-                                          type="text"
-                                          placeholder="Phone Number"
-                                        />
-                                      </span>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div className="PlayBtnWrap text-end">
-                                <PlayButton label="Play Now" className="refCardBtn" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+    <div className="customTabs">
+      <Container className="custom-container">
+        <Tabs
+          activeKey={activeTab}
+          onSelect={(k) => setActiveTab(k)}
+          id="customTabsWrapper"
+          fill
+        >
+          <Tab eventKey="My-Account" title="My Account">
+            <div className="myAccount">
+              <div className="tabtitle">
+                <img src={tabTitle} alt="tabTitle" className="img-fluid"/>
+              </div>
+              <div className="myAccountWrapper">
+                <div className="formLeft">
+                  <img src={formLeftImg} alt="formLeftImg" />
+                </div>
+                <div className="formRight">
+                  <div className="formGroup">
+                    <div
+                      className={`inputBox ${
+                        activeInput === "first" || filledInputs.first
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      <input
+                        type="text"
+                        placeholder="First Name"
+                        onFocus={() => setActiveInput("first")}
+                        onBlur={(e) => handleBlur(e, "first")}
+                      />
+                      <span className="linearBorder"></span>
                     </div>
-                  </Tab>
-                  <Tab eventKey="Wallet" title="Wallet">
-                    <div>
-                      <div className="tabsBodyDesign">
-                        <span className="topLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <span className="bottomLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <div className="tabsBodyContent">
-                          <h2 className="text-center">My Wallet</h2>
-                        </div>
-                      </div>
+                    <div
+                      className={`inputBox ${
+                        activeInput === "last" || filledInputs.last
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      <input
+                        type="text"
+                        placeholder="Last Name"
+                        onFocus={() => setActiveInput("last")}
+                        onBlur={(e) => handleBlur(e, "last")}
+                      />
+                      <span className="linearBorder"></span>
                     </div>
-                  </Tab>
-                  <Tab eventKey="AllTransactions" title="All Transactions">
-                    <div>
-                      <div className="tabsBodyDesign">
-                        <span className="topLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <span className="bottomLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <div className="tabsBodyContent">
-                          <h2 className="text-center">My All Transactions</h2>
-                        </div>
-                      </div>
+                  </div>
+                  <div className="formGroup">
+                    <div
+                      className={`inputBox ${
+                        activeInput === "user" || filledInputs.user
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      <input
+                        type="text"
+                        placeholder="User Name"
+                        onFocus={() => setActiveInput("user")}
+                        onBlur={(e) => handleBlur(e, "user")}
+                      />
+                      <span className="linearBorder"></span>
                     </div>
-                  </Tab>
-                  <Tab eventKey="MyAffiliates" title="My Affiliates">
-                    <div>
-                      <div className="tabsBodyDesign">
-                        <span className="topLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <span className="bottomLeftCor"></span>
-                        <span className="topRightCor"></span>
-                        <div className="tabsBodyContent">
-                          <h2 className="text-center">My Affiliates</h2>
-                        </div>
-                      </div>
+                    <div
+                      className={`inputBox ${
+                        activeInput === "birthDate" || filledInputs.birthDate
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      <input
+                        type="text"
+                        placeholder="Birth date"
+                        onFocus={() => setActiveInput("birthDate")}
+                        onBlur={(e) => handleBlur(e, "birthDate")}
+                      />
+                      <span className="linearBorder"></span>
                     </div>
-                  </Tab>
-                </Tabs>
-              )}
-            </Col>
-          </Row>
-        </div>
-      </div>
-    </>
+                  </div>
+                  <div className="formGroup">
+                    <div
+                      className={`inputBox ${
+                        activeInput === "email" || filledInputs.email
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        onFocus={() => setActiveInput("email")}
+                        onBlur={(e) => handleBlur(e, "email")}
+                      />
+                      <span className="linearBorder"></span>
+                    </div>
+                    <div
+                      className={`inputBox ${
+                        activeInput === "number" || filledInputs.number
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      <input
+                        type="text"
+                        placeholder="Phone Number"
+                        onFocus={() => setActiveInput("number")}
+                        onBlur={(e) => handleBlur(e, "number")}
+                      />
+                      <span className="linearBorder"></span>
+                    </div>
+                  </div>
+
+                  <div className="text-end">
+                    <PlayButton label="Play Now" className="formBtn refCardBtn" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="formTabCorners">
+                <span className="leftCorner">
+                  <img src={leftCorner} alt="" />
+                </span>
+                <span className="rightCorner">
+                  <img src={rightCorner} alt="" />
+                </span>
+                <span className="leftBottomCorner">
+                  <img src={leftBottomCorner} alt="" />
+                </span>
+                <span className="rightBottomCorner">
+                  <img src={rightBottomCorner} alt="" />
+                </span>
+              </div>
+            </div>
+          </Tab>
+          <Tab eventKey="Wallet" title="Wallet">
+            <h1 className="text-center">Tab content for Wallet</h1>
+            <div className="formTabCorners">
+                <span className="leftCorner">
+                  <img src={leftCorner} alt="" />
+                </span>
+                <span className="rightCorner">
+                  <img src={rightCorner} alt="" />
+                </span>
+                <span className="leftBottomCorner">
+                  <img src={leftBottomCorner} alt="" />
+                </span>
+                <span className="rightBottomCorner">
+                  <img src={rightBottomCorner} alt="" />
+                </span>
+              </div>
+          </Tab>
+          <Tab eventKey="All-Transactions" title="All Transactions">
+            <h1 className="text-center">Tab content for All Transactions</h1>
+            <div className="formTabCorners">
+                <span className="leftCorner">
+                  <img src={leftCorner} alt="" />
+                </span>
+                <span className="rightCorner">
+                  <img src={rightCorner} alt="" />
+                </span>
+                <span className="leftBottomCorner">
+                  <img src={leftBottomCorner} alt="" />
+                </span>
+                <span className="rightBottomCorner">
+                  <img src={rightBottomCorner} alt="" />
+                </span>
+              </div>
+          </Tab>
+          <Tab eventKey="My-Affiliates" title="My Affiliates">
+            <h1 className="text-center">Tab content for  My Affiliates</h1>
+            <div className="formTabCorners">
+                <span className="leftCorner">
+                  <img src={leftCorner} alt="" />
+                </span>
+                <span className="rightCorner">
+                  <img src={rightCorner} alt="" />
+                </span>
+                <span className="leftBottomCorner">
+                  <img src={leftBottomCorner} alt="" />
+                </span>
+                <span className="rightBottomCorner">
+                  <img src={rightBottomCorner} alt="" />
+                </span>
+              </div>
+          </Tab>
+        </Tabs>
+      </Container>
+    </div>
   );
 }
 
